@@ -1,0 +1,1 @@
+Upon cloning the project, create a dotenv file and put your secret token inside a key of "ACCESS_TOKEN_SECRET" and your api key from the site <a href='https://apilayer.com/marketplace/short_url-api?'>APILayer</a> inside a key of API_KEY.
