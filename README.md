@@ -52,15 +52,24 @@ Start the server
 Make a dotenv file and enter your credentials below. ACCESS_TOKEN_SECRET will be used as a secret key for generating jsonwebtoken and API_KEY will be used for shortening url api (More about api [here](https://apilayer.com/marketplace/short_url-api))
 
 ```bash
-    ACCESS_TOKEN_SECRET : <your secret token>
-    API_KEY : <your api key>
+    ACCESS_TOKEN_SECRET = <your secret token>
+    API_KEY = <your api key>
+
+    //for mongodb Atlas connection
+    USERNAME = <your username>
+    PASSWORD = <your password>
+    CLUSTERNAME = <your cluster name>
 ```
 Connect your mongodb database.
 
 ```bash
+    require('dotenv').config()
     const mongoose = require('mongoose');
 
-    const mongodb = <your database uri>;
+    const username = process.env.USERNAME
+    const password = process.env.PASSWORD
+    const clusterName = process.env.CLUSTERNAME
+    const mongodb = `mongodb+srv://${username}:${password}@${clusterName}.64waou1.mongodb.net/?retryWrites=true&w=majority`;
 
     mongoose.connect(mongodb)
     .then(console.log('database connected'))
