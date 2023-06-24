@@ -45,7 +45,7 @@ app.post('/url', (req,res)=>shortenUrl(req,res, Registers))
 
 app.post('/search', (req,res)=>handleSearch(req,res,Registers))
 
-export default app;
+module.exports = app;
 
 
 
