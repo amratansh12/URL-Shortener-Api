@@ -45,7 +45,9 @@ app.post('/url', (req,res)=>shortenUrl(req,res, Registers))
 
 app.post('/search', (req,res)=>handleSearch(req,res,Registers))
 
-module.exports = app;
+app.listen('3000', ()=>{
+    console.log('server running succesfully!')
+})
 
 
 
