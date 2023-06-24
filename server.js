@@ -45,9 +45,7 @@ app.post('/url', (req,res)=>shortenUrl(req,res, Registers))
 
 app.post('/search', (req,res)=>handleSearch(req,res,Registers))
 
-app.listen('3001', () => {
-    console.log('server running on port 3001')
-})
+export default app;
 
 
 
