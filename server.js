@@ -23,14 +23,14 @@ app.use(cookieParser());
 //username - amratansh12
 //password - z2CKQBLTZcTGYYKi
 // const mongodb = "mongodb://127.0.0.1:27017/users"
-const username = process.env.USERNAME
+const username = 'amratansh12'
 const password = process.env.PASSWORD
 const clusterName = process.env.CLUSTERNAME
 const mongodb = `mongodb+srv://${username}:${password}@${clusterName}.64waou1.mongodb.net/?retryWrites=true&w=majority`;
 
 mongoose.connect(mongodb)
 .then(console.log('database connected'))
-.catch(error=> console.log(error))
+.catch(error=> console.log(error.message))
 
 //Api
 app.get('/', (req, res)=>{
